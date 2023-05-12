@@ -7,21 +7,11 @@
 }
 
 
-/*** Spinner ***/
-.spinner {
-    width: 40px;
-    height: 40px;
-    background: var(--primary);
-    margin: 100px auto;
-    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
-    animation: sk-rotateplane 1.2s infinite ease-in-out;
-}
-
 .logo{
     width:1%;
 }
 .navbar{
-    background-color: #434344;
+    background-color:  #434344;
 }
 
 .nav-link{
@@ -42,9 +32,7 @@
     color: #000;
 }
 
-/* .nav-button{
-    background-color: #000000;
-} */
+
 
 @-webkit-keyframes sk-rotateplane {
     0% {
@@ -164,36 +152,202 @@ h6,
 }
 
 
-/*** Navbar ***/
-.navbar-dark .navbar-nav .nav-link {
-    font-family: 'Nunito', sans-serif;
-    position: relative;
-    margin-left: 25px;
-    padding: 35px 0;
-    color: #FFFFFF;
+#home-section{
+    background-image: url('../img/mario-gogh-VBLHICVh-lI-unsplash.jpg');
+    background-size:  cover;
+    background-position: 10%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+
+
+#home-section #home-section-card{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    /* float: right; */
+    margin: 18% 10% 0 0;
+    height: 40vh;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+  padding: 10px;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.66);
+  color: white;
+
+  transition: all 0.3s;
+}
+
+#home-section #home-section-card #home-section-card-heading{
+    font-size: 2.5rem;
+    /* padding: 0 0 10px 0; */
+    margin-bottom: -10px;
+    color: white;
+}
+
+#home-section #home-section-card #home-section-card-para{
     font-size: 18px;
-    font-weight: 600;
-    outline: none;
-    transition: .5s;
 }
 
-.sticky-top.navbar-dark .navbar-nav .nav-link {
-    padding: 20px 0;
-    color: var(--dark);
+#home-section #home-section-card #home-section-card-btn{
+    background-color: lightblue;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: 180px;
+    justify-content: center;
+    padding: 10px;
+    transition: all 0.3s;
+    /* font-size: 12px; */
+    /* font-size: 15px; */
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary);
+
+/* 
+#home-section #home-section-card:hover {
+    width: 40.9%;
+    height: 51vh;
+    margin: 12.8% 9.8% 0 0;
+    padding: 5px;
+} */
+
+#home-section #home-section-card #home-section-card-btn:hover{
+    /* width: 210px; */
+    background-color: #06A3DA;
+    color: black;
 }
 
-.navbar-dark .navbar-brand h1 {
-    color: #FFFFFF;
+
+
+/* #home-section .home-section-clients-1{
+  
+    width: 30%;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.66);
+} */
+
+/* #home-section #home-section-clients-0{
+    
+    width: 30%;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.66);
+} */
+
+/* #navbar-section-logo{
+    width: 6%;
+} */
+
+#home-section-interest{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 88%;
+    /* background-color: red; */
+    margin: -10px 0 0 0;
 }
 
-.navbar-dark .navbar-toggler {
-    color: var(--primary) !important;
-    border-color: var(--primary) !important;
+#home-section-interest-input{
+    width: 70%;
+    /* margin: 0px 5px 0px 0; */
+    border-radius: 10px 0 0 10px;
+    border: none;
+    padding: 10px;
+    border: 1px solid #06A3DA;
+}
+
+@media (max-width: 767.98px) {
+
+    #footer-section-get{
+        margin-bottom: 50px;
+        border-right: none;
+    }
+
+    #home-section #home-section-card{
+           /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    /* float: right; */
+    /* margin: 18% 10% 0 0; */
+    height: 50vh;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+  padding: 10px;
+  box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.66);
+  color: white;
+
+  transition: all 0.3s;
+    }
+
+    #home-section #home-section-card #home-section-card-heading{
+        font-size: 2rem;
+        /* padding: 0 0 10px 0; */
+        /* margin-bottom: -10px; */
+        color: white;
+    }
+    #home-section-interest{
+        display: flex;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+        /* width: 80%; */
+        /* background-color: red; */
+        margin: -10px 0 0 0;
+    }
+
+    #home-section-interest-input{
+        width: 80%;
+        margin: 0px 5px 5px 0;
+        border-radius: 10px;
+        border: none;
+        /* padding: 10px;
+        yte */
+        text-align: center;
+        border: 1px solid #06A3DA;
+    }
+
+    #home-section #home-section-card #home-section-card-btn{
+        background-color: lightblue;
+        border: none;
+        border-radius: 10px;
+        width: 200px;
+        justify-content: center;
+        padding: 10px;
+        transition: all 0.3s;
+        /* font-size: 15px; */
+    }
+}
+
+#feature-section{
+    background-color: whitesmoke;
+    height: 100vh;
 }
 
 @media (max-width: 991.98px) {
@@ -253,40 +407,6 @@ h6,
     .sticky-top.navbar-dark .navbar-brand h1 {
         color: var(--primary);
     }
-}
-
-
-/*** Carousel ***/
-.carousel-caption {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(9, 30, 62, .7);
-    z-index: 1;
-}
-
-@media (max-width: 576px) {
-    .carousel-caption h5 {
-        font-size: 14px;
-        font-weight: 500 !important;
-    }
-
-    .carousel-caption h1 {
-        font-size: 30px;
-        font-weight: 600 !important;
-    }
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 10%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 3rem;
-    height: 3rem;
 }
 
 
@@ -495,15 +615,6 @@ h6,
     transform: scale(1.15);
 }
 
-
-/*** Miscellaneous ***/
-@media (min-width: 991.98px) {
-    .facts {
-        position: relative;
-        margin-top: -75px;
-        z-index: 1;
-    }
-}
 
 .back-to-top {
     position: fixed;
