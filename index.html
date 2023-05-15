@@ -542,6 +542,9 @@
                                     <input type="text" name="Service" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
+                                    <input type="datetime-local" name="Date" value="datetime-local" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
                                     <textarea name="Message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
@@ -557,13 +560,21 @@
     </div>
       
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwjZzPkynTw1C167ztWlK31BaXU37cfYppr9wAEhImbM1rKWgMo1CyTzpK2sbLBZXsj/exec'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzcqIrwMa-fMbqzO_9a1paOwn7l6V0E8u3vCE5Z6j_J4wQ-uoIXM_-hWqE-CXDvdqYY/exec'
         const form = document.forms['submit-to-google-sheet']
-      
+        const msg = document.getElementById('msg')
+
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
+            .then(response => {
+                msg.innerHTML = "Thank you for your message "
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5500)
+                form.reset()
+
+            })
             .catch(error => console.error('Error!', error.message))
         })
       </script>
