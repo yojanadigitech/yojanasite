@@ -186,10 +186,14 @@
                 <div id='home-section-card'>
                     <p id='home-section-card-para'>Best in Class Digital Solutions</p>
                     <h1 id='home-section-card-heading'><b>Tailored for your Needs</b></h1>
+                    <!-- <form name="submit-to-google-sheet"></form> -->
                     <div id="home-section-interest">
-                        <input id="home-section-interest-input" type="email" placeholder="Your email">
-                        <button id='home-section-card-btn'> Yes, I'm interested</button>
+                        
+                        <input id="home-section-interest-input" name="E-mail" type="email" placeholder="Your email">
+                        <button type="submit" id='home-section-card-btn'> Yes, I'm interested</button>
+                    
                     </div>
+                <!-- </form> -->
                     
                 </div>
                
@@ -541,8 +545,8 @@
                                 <div class="col-12">
                                     <input type="text" name="Service" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
                                 </div>
-                                <div class="col-12">
-                                    <input type="datetime-local" name="Date" value="datetime-local" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
+                                <div class="col-12" style="display: none !important">
+                                    <input name="Date" value="datetime-local" class=" date form-control bg-light border-0" placeholder="Your Service" style="height: 55px;" >
                                 </div>
                                 <div class="col-12">
                                     <textarea name="Message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
