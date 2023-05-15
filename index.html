@@ -556,21 +556,14 @@
         </div>
     </div>
       
-      <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxkwpPIRuVmvdM8urOn-X7-A0wyYupWyMxA9E7xd2j0Y1bvFN7oZjukZxLnuYpSdP0b/exec'
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwjZzPkynTw1C167ztWlK31BaXU37cfYppr9wAEhImbM1rKWgMo1CyTzpK2sbLBZXsj/exec'
         const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById('msg')
       
         form.addEventListener('submit', e => {
           e.preventDefault()
           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Thank you for your message!"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                }, 5500)
-                form.reset()
-            })
+            .then(response => console.log('Success!', response))
             .catch(error => console.error('Error!', error.message))
         })
       </script>
