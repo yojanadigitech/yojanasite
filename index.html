@@ -620,35 +620,54 @@
                 </div>
                 <div class="col-lg-5">
                     <div style="background-color: #434344;" class=" border-3 rounded h-100 d-flex align-items-center p-5 wow zoomIn" data-wow-delay="0.9s">
-                        <form>
+                        <form name="submit-to-google-sheet">
                             <div class="row g-3">
                                 <div class="col-xl-12">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" name="Name" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" name="E-mail" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
+                                    <input type="text" name="Service" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
+                                    <input type="datetime-local" name="Date" value="datetime-local" class="form-control bg-light border-0" placeholder="Your Service" style="height: 55px;">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="Message" class="form-control bg-light border-0" rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-light w-100 py-3" type="submit">Request A Quote</button>
                                 </div>
                             </div>
+                            <span id="msg"></span>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+      
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzcqIrwMa-fMbqzO_9a1paOwn7l6V0E8u3vCE5Z6j_J4wQ-uoIXM_-hWqE-CXDvdqYY/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Thank you for your message "
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5500)
+                form.reset()
+
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
     <!-- Quote End -->
 
 
